@@ -99,7 +99,7 @@ function Logo() {
 
   return (
     <TooltipWrapper
-      title="Tokyo Free Black Next.js Typescript Admin Dashboard"
+      title="WOW LFG Landing Page V1"
       arrow
     >
       <LogoWrapper href="/">
@@ -115,11 +115,14 @@ function Logo() {
           color="success"
           badgeContent="1.0"
         >
-          <LogoSignWrapper>
-            <LogoSign>
-              <LogoSignInner />
-            </LogoSign>
-          </LogoSignWrapper>
+          <img 
+            src="/LFGlogo.png" 
+            alt="Logo" 
+            style={{ 
+              width: '50px',  
+              height: 'auto'
+            }} 
+          />
         </Badge>
       </LogoWrapper>
     </TooltipWrapper>

@@ -11,7 +11,6 @@ import BaseLayout from 'src/layouts/BaseLayout';
 
 import Link from 'src/components/Link';
 import Head from 'next/head';
-
 import Logo from 'src/components/LogoSign';
 import Hero from 'src/content/Overview/Hero';
 
@@ -38,12 +37,38 @@ function Overview() {
   return (
     <OverviewWrapper>
       <Head>
-        <title>Tokyo Free Black NextJS Typescript Admin Dashboard</title>
+        <title>WOW LFG</title>
       </Head>
       <HeaderWrapper>
         <Container maxWidth="lg">
           <Box display="flex" alignItems="center">
             <Logo />
+            <Box display="flex" alignItems="center" gap={2} ml={4}>
+              <Button 
+                component={Link} 
+                href="/" 
+                variant="text" 
+                sx={{ color: 'text.primary', fontSize: '1rem', textTransform: 'none' }} 
+              >
+                Home
+              </Button>
+              <Button 
+                component={Link} 
+                href="/about-us" 
+                variant="text" 
+                sx={{ color: 'text.primary', fontSize: '1rem', textTransform: 'none' }} 
+              >
+                About Us
+              </Button>
+              <Button 
+                component={Link} 
+                href="/contact" 
+                variant="text" 
+                sx={{ color: 'text.primary', fontSize: '1rem', textTransform: 'none' }} 
+              >
+                Contact Me
+              </Button>
+            </Box>
             <Box
               display="flex"
               alignItems="center"
@@ -54,11 +79,11 @@ function Overview() {
               <Box>
                 <Button
                   component={Link}
-                  href="/dashboards/tasks"
+                  href="https://wowlfg.com/"
                   variant="contained"
                   sx={{ ml: 2 }}
                 >
-                  Live Preview
+                  Your Dashboard
                 </Button>
               </Box>
             </Box>
@@ -67,17 +92,26 @@ function Overview() {
       </HeaderWrapper>
       <Hero />
       <Container maxWidth="lg" sx={{ mt: 8 }}>
-        <Typography textAlign="center" variant="subtitle1">
-          Crafted by{' '}
-          <Link
-            href="https://bloomui.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            BloomUI.com
-          </Link>
-        </Typography>
-      </Container>
+  <Typography textAlign="center" variant="subtitle1">
+    Modified by{' '}
+    <Link
+      href="https://www.jerryzywu.com/" 
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Pikago
+    </Link>
+    {' '}based on a template from{' '}
+    <Link
+      href="https://bloomui.com"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      BloomUI.com
+    </Link>
+  </Typography>
+</Container>
+
     </OverviewWrapper>
   );
 }

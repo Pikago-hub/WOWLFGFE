@@ -6,6 +6,12 @@ import {
   Typography,
   styled
 } from '@mui/material';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faShieldAlt,
+  faExchangeAlt,
+  faRobot
+} from '@fortawesome/free-solid-svg-icons';
 
 import Link from 'src/components/Link';
 
@@ -35,65 +41,65 @@ const LabelWrapper = styled(Box)(
 `
 );
 
-const MuiAvatar = styled(Box)(
-  ({ theme }) => `
-    width: ${theme.spacing(8)};
-    height: ${theme.spacing(8)};
-    border-radius: ${theme.general.borderRadius};
-    background-color: #e5f7ff;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto ${theme.spacing(2)};
+// const MuiAvatar = styled(Box)(
+//   ({ theme }) => `
+//     width: ${theme.spacing(8)};
+//     height: ${theme.spacing(8)};
+//     border-radius: ${theme.general.borderRadius};
+//     background-color: #e5f7ff;
+//     flex-shrink: 0;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin: 0 auto ${theme.spacing(2)};
 
-    img {
-      width: 60%;
-      height: 60%;
-      display: block;
-    }
-`
-);
+//     img {
+//       width: 60%;
+//       height: 60%;
+//       display: block;
+//     }
+// `
+// );
 
-const TsAvatar = styled(Box)(
-  ({ theme }) => `
-    width: ${theme.spacing(8)};
-    height: ${theme.spacing(8)};
-    border-radius: ${theme.general.borderRadius};
-    background-color: #dfebf6;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto ${theme.spacing(2)};
+// const TsAvatar = styled(Box)(
+//   ({ theme }) => `
+//     width: ${theme.spacing(8)};
+//     height: ${theme.spacing(8)};
+//     border-radius: ${theme.general.borderRadius};
+//     background-color: #dfebf6;
+//     flex-shrink: 0;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin: 0 auto ${theme.spacing(2)};
 
-    img {
-      width: 60%;
-      height: 60%;
-      display: block;
-    }
-`
-);
+//     img {
+//       width: 60%;
+//       height: 60%;
+//       display: block;
+//     }
+// `
+// );
 
-const NextJsAvatar = styled(Box)(
-  ({ theme }) => `
-  width: ${theme.spacing(8)};
-  height: ${theme.spacing(8)};
-  border-radius: ${theme.general.borderRadius};
-  background-color: #dfebf6;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto ${theme.spacing(2)};
+// const NextJsAvatar = styled(Box)(
+//   ({ theme }) => `
+//   width: ${theme.spacing(8)};
+//   height: ${theme.spacing(8)};
+//   border-radius: ${theme.general.borderRadius};
+//   background-color: #dfebf6;
+//   flex-shrink: 0;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin: 0 auto ${theme.spacing(2)};
 
-    img {
-      width: 60%;
-      height: 60%;
-      display: block;
-    }
-`
-);
+//     img {
+//       width: 60%;
+//       height: 60%;
+//       display: block;
+//     }
+// `
+// );
 
 function Hero() {
   return (
@@ -105,9 +111,9 @@ function Hero() {
         container
       >
         <Grid item md={10} lg={8} mx="auto">
-          <LabelWrapper color="success">Version 1.0.0</LabelWrapper>
+          <LabelWrapper color="success">Version 0.1</LabelWrapper>
           <TypographyH1 sx={{ mb: 2 }} variant="h1">
-            Tokyo Free Black Next.js Typescript Admin Dashboard
+            WOW LFG Official Wesbite
           </TypographyH1>
           <TypographyH2
             sx={{ lineHeight: 1.5, pb: 4 }}
@@ -115,74 +121,69 @@ function Hero() {
             color="text.secondary"
             fontWeight="normal"
           >
-            High performance React template built with lots of powerful
-            Material-UI components across multiple product niches for fast &
-            perfect apps development processes
+            WoW LFG is a World of Warcraft community and the main hub of Huokan
+            Bot
           </TypographyH2>
           <Button
             component={Link}
-            href="/dashboards/tasks"
+            href="https://wowlfg.com/"
             size="large"
             variant="contained"
           >
-            Browse Live Preview
+            Login to your Dashboard
           </Button>
           <Button
             sx={{ ml: 2 }}
             component="a"
             target="_blank"
             rel="noopener"
-            href="https://bloomui.com/product/tokyo-free-black-nextjs-typescript-material-ui-admin-dashboard/"
+            href="https://discord.gg/huokan"
             size="large"
             variant="text"
           >
-            Key Features
+            Our Discord Channel
           </Button>
           <Grid container spacing={3} mt={5}>
             <Grid item md={4}>
-              <MuiAvatar>
-                <img
-                  src="/static/images/logo/material-ui.svg"
-                  alt="Material-UI"
-                />
-              </MuiAvatar>
+              <Box sx={{ pb: 2 }}>
+                <FontAwesomeIcon icon={faShieldAlt} size="4x" />
+              </Box>
               <Typography variant="h4">
                 <Box sx={{ pb: 2 }}>
-                  <b>Powered by MUI (Material-UI)</b>
+                  <b>WoW Look for Booster (LFB)</b>
                 </Box>
                 <Typography component="span" variant="subtitle2">
-                  A simple and customizable component library to build faster,
-                  beautiful, and accessible React apps.
+                  WoW LFG is fully committed to the Discord and WoW terms of
+                  service, to avoid any potential harm to anyone's account.
                 </Typography>
               </Typography>
             </Grid>
             <Grid item md={4}>
-              <NextJsAvatar>
-                <img src="/static/images/logo/next-js.svg" alt="NextJS" />
-              </NextJsAvatar>
+              <Box sx={{ pb: 2 }}>
+                <FontAwesomeIcon icon={faExchangeAlt} size="4x" />
+              </Box>
               <Typography variant="h4">
                 <Box sx={{ pb: 2 }}>
-                  <b>Built with Next.js</b>
+                  <b>Gold Swaps</b>
                 </Box>
                 <Typography component="span" variant="subtitle2">
-                  Next.js gives you the best developer experience with all the
-                  features you need for production.
+                  WoW LFG IS NOT A BOOSTING COMMUNITY and we are NOT offering
+                  any sort boosting, matchmaking, escrow, etc.
                 </Typography>
               </Typography>
             </Grid>
             <Grid item md={4}>
-              <TsAvatar>
-                <img
-                  src="/static/images/logo/typescript.svg"
-                  alt="Typescript"
-                />
-              </TsAvatar>
+              <Box sx={{ pb: 2 }}>
+                <FontAwesomeIcon icon={faRobot} size="4x" />
+              </Box>
               <Typography variant="h4">
                 <Box sx={{ pb: 2 }}>
-                  <b>Built with Typescript</b>
+                  <b>Huokan Bot support</b>
                 </Box>
                 <Typography component="span" variant="subtitle2">
-                  Tokyo Free Black features a modern technology stack and is built with React + Typescript.
+                  We don't support ANY forms of in-game advertisement, we don't
+                  have a price list, we don't have advertisers, and we don't pay
+                  anyone
                 </Typography>
               </Typography>
             </Grid>
