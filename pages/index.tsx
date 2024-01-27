@@ -13,6 +13,7 @@ import Link from 'src/components/Link';
 import Head from 'next/head';
 import Logo from 'src/components/LogoSign';
 import Hero from 'src/content/Overview/Hero';
+import Header from 'src/components/Header'; 
 
 const HeaderWrapper = styled(Card)(
   ({ theme }) => `
@@ -39,57 +40,7 @@ function Overview() {
       <Head>
         <title>WOW LFG</title>
       </Head>
-      <HeaderWrapper>
-        <Container maxWidth="lg">
-          <Box display="flex" alignItems="center">
-            <Logo />
-            <Box display="flex" alignItems="center" gap={2} ml={4}>
-              <Button 
-                component={Link} 
-                href="/" 
-                variant="text" 
-                sx={{ color: 'text.primary', fontSize: '1rem', textTransform: 'none' }} 
-              >
-                Home
-              </Button>
-              <Button 
-                component={Link} 
-                href="/about-us" 
-                variant="text" 
-                sx={{ color: 'text.primary', fontSize: '1rem', textTransform: 'none' }} 
-              >
-                About Us
-              </Button>
-              <Button 
-                component={Link} 
-                href="/contact" 
-                variant="text" 
-                sx={{ color: 'text.primary', fontSize: '1rem', textTransform: 'none' }} 
-              >
-                Contact Me
-              </Button>
-            </Box>
-            <Box
-              display="flex"
-              alignItems="center"
-              justifyContent="space-between"
-              flex={1}
-            >
-              <Box />
-              <Box>
-                <Button
-                  component={Link}
-                  href="https://wowlfg.com/"
-                  variant="contained"
-                  sx={{ ml: 2 }}
-                >
-                  Your Dashboard
-                </Button>
-              </Box>
-            </Box>
-          </Box>
-        </Container>
-      </HeaderWrapper>
+      <Header />
       <Hero />
       <Container maxWidth="lg" sx={{ mt: 8 }}>
   <Typography textAlign="center" variant="subtitle1">
